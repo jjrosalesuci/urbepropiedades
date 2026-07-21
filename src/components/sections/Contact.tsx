@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, Send } from 'lucide-react'
+import { Mail, MapPin, MessageCircle, Phone, Send, User } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
 import { Button } from '@/components/ui/Button'
 import { contactInfo } from '@/data/siteContent'
@@ -24,8 +24,16 @@ export function Contact() {
               {contactInfo.phone}
             </li>
             <li className="flex items-center gap-3">
+              <MessageCircle className="text-blue-200" size={18} />
+              WhatsApp: {contactInfo.whatsapp}
+            </li>
+            <li className="flex items-center gap-3">
               <MapPin className="text-blue-200" size={18} />
               {contactInfo.address}
+            </li>
+            <li className="flex items-center gap-3">
+              <User className="text-blue-200" size={18} />
+              {contactInfo.agentRole}: {contactInfo.agentName}
             </li>
           </ul>
           <p className="mt-6 text-sm text-slate-300">

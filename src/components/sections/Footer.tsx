@@ -1,10 +1,16 @@
 import { Facebook, Instagram, MessageCircle } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
-import { contactInfo } from '@/data/siteContent'
+import { contactInfo, socialLinks } from '@/data/siteContent'
 
 const currentYear = new Date().getFullYear()
 
 export function Footer() {
+  const socialItems = [
+    { label: 'Instagram', href: socialLinks.instagram, icon: Instagram },
+    { label: 'Facebook', href: socialLinks.facebook, icon: Facebook },
+    { label: 'WhatsApp', href: socialLinks.whatsapp, icon: MessageCircle },
+  ]
+
   return (
     <footer className="border-t border-white/10 py-12">
       <Container>
@@ -46,17 +52,20 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li>{contactInfo.email}</li>
               <li>{contactInfo.phone}</li>
+              <li>WhatsApp: {contactInfo.whatsapp}</li>
               <li>{contactInfo.address}</li>
             </ul>
             <div className="mt-4 flex gap-2">
-              {[Instagram, Facebook, MessageCircle].map((Icon, index) => (
+              {socialItems.map((item) => (
                 <a
-                  key={index}
-                  href="#"
-                  aria-label="Red social"
+                  key={item.label}
+                  href={item.href}
+                  aria-label={item.label}
+                  target="_blank"
+                  rel="noreferrer"
                   className="grid h-9 w-9 place-content-center rounded-lg border border-white/10 bg-white/5 text-slate-200 transition hover:bg-white/10"
                 >
-                  <Icon size={16} />
+                  <item.icon size={16} />
                 </a>
               ))}
             </div>

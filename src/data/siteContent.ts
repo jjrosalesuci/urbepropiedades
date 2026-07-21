@@ -198,10 +198,7 @@ export const aboutValues: AboutValue[] = [
 ]
 
 export const teamMembers: TeamMember[] = [
-  { name: 'Nombre Apellido', role: 'Fundador / Corredor responsable', initials: 'NA' },
-  { name: 'Nombre Apellido', role: 'Asesor comercial', initials: 'NA' },
-  { name: 'Nombre Apellido', role: 'Administración de alquileres', initials: 'NA' },
-  { name: 'Nombre Apellido', role: 'Marketing y comunicación', initials: 'NA' },
+  { name: 'Janet Dominguez', role: 'Agente inmobiliario', initials: 'JD' },
 ]
 
 export const faqs: Faq[] = [
@@ -273,9 +270,17 @@ export const stats: StatItem[] = [
 ]
 
 export const contactInfo = {
-  email: 'contacto@urbepropiedades.com',
-  phone: '+00 000 000 000',
-  whatsapp: '+00 000 000 000',
+  email: 'srajanet.dominguez@gmail.com',
+  phone: '097 001 151',
+  whatsapp: '097 001 151',
   address: 'Dirección de la oficina, Ciudad',
   hours: 'Lunes a viernes de 9 a 18 h',
+  agentName: 'Janet Dominguez',
+  agentRole: 'Agente inmobiliario',
+}
+
+export const socialLinks = {
+  instagram: 'https://www.instagram.com/urbe.propiedades/',
+  facebook: 'https://www.facebook.com/people/Urbe-Propiedades/61592181718042/',
+  whatsapp: 'https://wa.me/097001151',
 }
