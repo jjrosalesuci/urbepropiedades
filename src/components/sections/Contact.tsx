@@ -1,6 +1,5 @@
-import { Mail, MapPin, MessageCircle, Phone, Send, User } from 'lucide-react'
+import { Mail, MapPin, MessageCircle, Phone, User } from 'lucide-react'
 import { Section } from '@/components/ui/Section'
-import { Button } from '@/components/ui/Button'
 import { contactInfo } from '@/data/siteContent'
 
 export function Contact() {
@@ -41,67 +40,16 @@ export function Contact() {
           </p>
         </div>
 
-        <form className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-soft" action="#" method="post">
-          <div className="grid gap-4 sm:grid-cols-2">
-            <label className="text-sm text-slate-200">
-              Nombre
-              <input
-                className="mt-2 w-full rounded-xl border border-white/10 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none transition focus:border-indigo-300"
-                name="name"
-                required
-              />
-            </label>
-            <label className="text-sm text-slate-200">
-              Teléfono
-              <input
-                className="mt-2 w-full rounded-xl border border-white/10 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none transition focus:border-indigo-300"
-                name="phone"
-                type="tel"
-                required
-              />
-            </label>
-          </div>
-          <label className="mt-4 block text-sm text-slate-200">
-            Correo
-            <input
-              type="email"
-              className="mt-2 w-full rounded-xl border border-white/10 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none transition focus:border-indigo-300"
-              name="email"
-              required
-            />
-          </label>
-          <label className="mt-4 block text-sm text-slate-200">
-            Tipo de consulta
-            <select
-              className="mt-2 w-full rounded-xl border border-white/10 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none transition focus:border-indigo-300"
-              name="topic"
-              defaultValue=""
-              required
-            >
-              <option value="" disabled>
-                Elegí una opción
-              </option>
-              <option value="vender">Quiero vender</option>
-              <option value="comprar">Quiero comprar</option>
-              <option value="alquilar">Quiero alquilar</option>
-              <option value="tasar">Quiero tasar</option>
-              <option value="administracion">Administración de alquileres</option>
-              <option value="otros">Otros</option>
-            </select>
-          </label>
-          <label className="mt-4 block text-sm text-slate-200">
-            Contanos brevemente
-            <textarea
-              className="mt-2 min-h-32 w-full rounded-xl border border-white/10 bg-slate-900/70 px-3 py-2 text-slate-100 outline-none transition focus:border-indigo-300"
-              name="message"
-              required
-            />
-          </label>
-
-          <Button type="submit" className="mt-6 gap-2">
-            Enviar consulta <Send size={16} />
-          </Button>
-        </form>
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-2 shadow-soft">
+          <iframe
+            src="https://dealgine.aseresoft.com/embed/forms/urbe-p-contactform"
+            width="100%"
+            frameBorder="0"
+            title="Formulario de contacto Urbe Propiedades"
+            style={{ border: 0 }}
+            className="h-[520px] w-full rounded-xl bg-white md:h-[700px]"
+          />
+        </div>
       </div>
     </Section>
   )
