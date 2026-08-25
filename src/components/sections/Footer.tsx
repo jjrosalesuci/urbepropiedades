@@ -55,7 +55,6 @@ export function Footer() {
               <li>{contactInfo.email}</li>
               <li>{contactInfo.phone}</li>
               <li>WhatsApp: {contactInfo.whatsapp}</li>
-              <li>{contactInfo.address}</li>
             </ul>
             <div className="mt-4 flex gap-2">
               {socialItems.map((item) => (
