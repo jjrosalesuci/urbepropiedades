@@ -15,6 +15,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        cards: fileURLToPath(new URL('./cards/index.html', import.meta.url)),
         flyer: fileURLToPath(new URL('./flyer/index.html', import.meta.url)),
       },
     },

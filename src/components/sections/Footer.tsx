@@ -45,6 +45,7 @@ export function Footer() {
               <li><a href="#faq">Preguntas frecuentes</a></li>
               <li><a href="#contacto">Contacto</a></li>
               <li><a href="/flyer">Flyer para imprimir</a></li>
+              <li><a href="/cards">Tarjetas para imprimir</a></li>
             </ul>
           </div>
 

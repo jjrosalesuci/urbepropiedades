@@ -49,11 +49,16 @@ a {
 
 @media print {
   @page {
-    margin: 1.5cm;
+    size: A4;
+    margin: 10mm;
   }
 
   body {
     background-color: #ffffff;
     color: #0f172a;
+  }
+
+  .card-print {
+    break-inside: avoid;
   }
 }
