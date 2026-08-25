@@ -53,6 +53,11 @@ a {
     margin: 10mm;
   }
 
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+
   .card-print {
     break-inside: avoid;
   }
