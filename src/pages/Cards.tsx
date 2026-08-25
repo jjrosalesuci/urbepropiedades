@@ -1,4 +1,4 @@
-import { Building2, Globe, Instagram, Mail, Phone, Printer } from 'lucide-react'
+import { Building2, Globe, Mail, Phone, Printer } from 'lucide-react'
 import { QRCodeSVG } from 'qrcode.react'
 import { businessCards, socialLinks } from '@/data/siteContent'
 
@@ -43,12 +43,6 @@ function BusinessCardFace() {
                 <Globe size={11} aria-hidden="true" />
               </span>
               {card.website}
-            </li>
-            <li className="flex items-center gap-2 text-slate-400">
-              <span className="grid h-5 w-5 shrink-0 place-content-center rounded-full bg-white/5 text-blueGlow">
-                <Instagram size={11} aria-hidden="true" />
-              </span>
-              {socialLinks.instagramHandle}
             </li>
           </ul>
         </div>
