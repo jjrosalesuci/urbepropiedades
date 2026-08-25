@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import type {
   AboutValue,
+  BusinessCard,
   Faq,
   FeatureItem,
   NavItem,
@@ -284,3 +285,14 @@ export const socialLinks = {
   facebook: 'https://www.facebook.com/people/Urbe-Propiedades/61592181718042/',
   whatsapp: 'https://wa.me/097001151',
 }
+
+export const businessCards: BusinessCard[] = [
+  {
+    name: contactInfo.agentName,
+    role: contactInfo.agentRole,
+    phone: contactInfo.phone,
+    whatsapp: contactInfo.whatsapp,
+    email: contactInfo.email,
+    website: 'urbepropiedades.com',
+  },
+]

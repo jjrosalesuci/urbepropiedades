@@ -52,3 +52,12 @@ export type StatItem = {
   label: string
   suffix?: string
 }
+
+export type BusinessCard = {
+  name: string
+  role: string
+  phone: string
+  whatsapp: string
+  email: string
+  website: string
+}

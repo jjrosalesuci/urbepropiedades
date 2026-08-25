@@ -46,3 +46,14 @@ a {
     scroll-behavior: auto !important;
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  .card-print {
+    break-inside: avoid;
+  }
+}
