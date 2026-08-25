@@ -283,7 +283,7 @@ export const contactInfo = {
 export const socialLinks = {
   instagram: 'https://www.instagram.com/urbe.propiedades/',
   facebook: 'https://www.facebook.com/people/Urbe-Propiedades/61592181718042/',
-  whatsapp: 'https://wa.me/097001151',
+  whatsapp: 'https://wa.me/59897001151',
 }
 
 export const businessCards: BusinessCard[] = [
