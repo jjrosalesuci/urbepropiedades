@@ -44,6 +44,7 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li><a href="#faq">Preguntas frecuentes</a></li>
               <li><a href="#contacto">Contacto</a></li>
+              <li><a href="/flyer">Flyer para imprimir</a></li>
             </ul>
           </div>
 
