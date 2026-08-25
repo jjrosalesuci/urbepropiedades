@@ -1,6 +1,7 @@
-import { Building2, Mail, MapPin, Phone, Printer } from 'lucide-react'
+import { Building2, Mail, Phone, Printer } from 'lucide-react'
+import { QRCodeSVG } from 'qrcode.react'
 import { Container } from '@/components/ui/Container'
-import { contactInfo, solutions } from '@/data/siteContent'
+import { contactInfo, socialLinks, solutions } from '@/data/siteContent'
 
 const highlightedSolutions = solutions.slice(0, 6)
 
@@ -19,14 +20,10 @@ export function FlyerPage() {
       </div>
 
       <Container className="max-w-3xl py-10 print:max-w-none print:py-0">
-        <header className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-base-950 via-base-900 to-base-800 px-6 py-8 text-white print:rounded-none print:px-0">
-          <span
-            className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gradient-to-br from-indigoGlow/40 to-blueGlow/20 blur-3xl"
-            aria-hidden="true"
-          />
+        <header className="relative overflow-hidden rounded-2xl bg-indigo-950 px-6 py-8 text-white print:rounded-none print:px-0">
           <div className="relative flex items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <span className="grid h-12 w-12 shrink-0 place-content-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 text-white shadow-glow">
+              <span className="grid h-12 w-12 shrink-0 place-content-center rounded-xl bg-indigo-500 text-white shadow-glow">
                 <Building2 size={22} aria-hidden="true" />
               </span>
               <div>
@@ -60,7 +57,7 @@ export function FlyerPage() {
                 key={solution.title}
                 className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-3 print:border-slate-300 print:bg-white"
               >
-                <span className="grid h-9 w-9 shrink-0 place-content-center rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 text-white">
+                <span className="grid h-9 w-9 shrink-0 place-content-center rounded-lg bg-indigo-500 text-white">
                   <solution.icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div>
@@ -98,17 +95,23 @@ export function FlyerPage() {
               <dd className="text-slate-700">{contactInfo.email}</dd>
             </div>
             <div>
-              <dt className="flex items-center gap-2 font-semibold text-slate-900">
-                <MapPin size={14} className="text-blue-600" aria-hidden="true" />
-                Dirección
-              </dt>
-              <dd className="text-slate-700">{contactInfo.address}</dd>
-            </div>
-            <div>
               <dt className="font-semibold text-slate-900">Horario</dt>
               <dd className="text-slate-700">{contactInfo.hours}</dd>
             </div>
           </dl>
+          <div className="mt-5 flex items-center gap-3 border-t border-indigo-100 pt-5">
+            <QRCodeSVG
+              value={socialLinks.whatsapp}
+              size={72}
+              bgColor="#ffffff"
+              fgColor="#1e1b4b"
+              level="M"
+              className="rounded-md border border-indigo-100 p-1"
+            />
+            <p className="text-sm text-slate-700">
+              Escaneá el código para escribirle por WhatsApp a {contactInfo.agentName}.
+            </p>
+          </div>
         </section>
 
         <footer className="mt-8 border-t border-slate-200 pt-4 text-center text-xs text-slate-500">
