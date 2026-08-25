@@ -46,3 +46,14 @@ a {
     scroll-behavior: auto !important;
   }
 }
+
+@media print {
+  @page {
+    margin: 1.5cm;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #0f172a;
+  }
+}
