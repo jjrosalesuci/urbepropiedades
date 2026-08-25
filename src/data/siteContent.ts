@@ -281,7 +281,8 @@ export const contactInfo = {
 }
 
 export const socialLinks = {
-  instagram: 'https://www.instagram.com/urbe.propiedades/',
+  instagram: 'https://www.instagram.com/urbepropiedades/',
+  instagramHandle: '@urbepropiedades',
   facebook: 'https://www.facebook.com/people/Urbe-Propiedades/61592181718042/',
   whatsapp: 'https://wa.me/097001151',
 }

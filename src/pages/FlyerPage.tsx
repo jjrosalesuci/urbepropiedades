@@ -1,4 +1,4 @@
-import { Building2, Mail, Phone, Printer } from 'lucide-react'
+import { Building2, Instagram, Mail, Phone, Printer } from 'lucide-react'
 import { QRCodeSVG } from 'qrcode.react'
 import { Container } from '@/components/ui/Container'
 import { contactInfo, socialLinks, solutions } from '@/data/siteContent'
@@ -97,6 +97,13 @@ export function FlyerPage() {
             <div>
               <dt className="font-semibold text-slate-900">Horario</dt>
               <dd className="text-slate-700">{contactInfo.hours}</dd>
+            </div>
+            <div>
+              <dt className="flex items-center gap-2 font-semibold text-slate-900">
+                <Instagram size={14} className="text-blue-600" aria-hidden="true" />
+                Instagram
+              </dt>
+              <dd className="text-slate-700">{socialLinks.instagramHandle}</dd>
             </div>
           </dl>
           <div className="mt-5 flex items-center gap-3 border-t border-indigo-100 pt-5">
