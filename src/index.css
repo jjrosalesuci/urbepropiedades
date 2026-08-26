@@ -69,4 +69,32 @@ a {
   .card-print {
     break-inside: avoid;
   }
+
+  /*
+   * Sangría + marcas de corte sutiles alrededor de cada tarjeta.
+   * El wrapper `.card-bleed` recibe un padding físico (3mm) que actúa como
+   * gutter entre tarjetas. Sobre ese padding dibujamos ocho pequeños trazos
+   * grises (dos por esquina, formando una L) alineados con los bordes de la
+   * tarjeta, para guiar el corte a guillotina o tijera sin que un milímetro
+   * de desviación arruine la tarjeta vecina.
+   */
+  .card-bleed {
+    break-inside: avoid;
+    background-image:
+      linear-gradient(#64748b, #64748b),
+      linear-gradient(#64748b, #64748b),
+      linear-gradient(#64748b, #64748b),
+      linear-gradient(#64748b, #64748b),
+      linear-gradient(#64748b, #64748b),
+      linear-gradient(#64748b, #64748b),
+      linear-gradient(#64748b, #64748b),
+      linear-gradient(#64748b, #64748b);
+    background-repeat: no-repeat;
+    background-size:
+      2mm 0.2mm, 2mm 0.2mm, 2mm 0.2mm, 2mm 0.2mm,
+      0.2mm 2mm, 0.2mm 2mm, 0.2mm 2mm, 0.2mm 2mm;
+    background-position:
+      0 3mm, 100% 3mm, 0 calc(100% - 3mm), 100% calc(100% - 3mm),
+      3mm 0, calc(100% - 3mm) 0, 3mm 100%, calc(100% - 3mm) 100%;
+  }
 }
