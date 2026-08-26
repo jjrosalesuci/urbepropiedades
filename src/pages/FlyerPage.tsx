@@ -20,6 +20,8 @@ const card = businessCards[0]
 
 // El flyer se imprime en A5 (148 × 210 mm). Esta regla @page sólo se aplica a
 // esta página porque es un entry point independiente (`flyer/index.html`).
+// El fondo de html/body se fuerza a blanco para que el margen no imprimible
+// del papel no aparezca como un marco negro alrededor del flyer.
 const flyerPrintStyles = `
   @media print {
     @page {
@@ -27,7 +29,7 @@ const flyerPrintStyles = `
       margin: 0;
     }
     html, body {
-      background: #04091c !important;
+      background: #ffffff !important;
     }
   }
 `
