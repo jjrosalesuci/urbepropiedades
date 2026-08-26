@@ -21,7 +21,7 @@ const flyerPrintStyles = `
 
 export function FlyerPage() {
   return (
-    <div className="min-h-screen bg-base-950 text-slate-100 print:min-h-0 print:bg-white">
+    <div className="min-h-screen bg-base-950 text-slate-100 print:min-h-0">
       <style dangerouslySetInnerHTML={{ __html: flyerPrintStyles }} />
 
       <div className="flex justify-center gap-3 border-b border-white/10 bg-base-900 py-4 print:hidden">
@@ -155,7 +155,7 @@ export function FlyerPage() {
               </div>
 
               <footer className="mt-4 flex items-center justify-between border-t border-white/10 pt-3 text-[10px] uppercase tracking-[0.16em] text-slate-400">
-                <span>{card.website}</span>
+                <span>Inmobiliaria de confianza</span>
                 <span>{contactInfo.hours}</span>
               </footer>
             </section>
